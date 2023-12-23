@@ -2,4 +2,155 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  padding: 10px;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (width >= 768px) {
+  .page {
+    padding: 20px;
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  position: relative;
+  height: 100%;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+.decor-zona {
+  position: absolute;
+  color: var(--accent-color);
+  top: 0px;
+  right: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 138.889%;
+  text-transform: uppercase;
+}
+
+.decor-zona::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  top: 7px;
+  right: -19px;
+}
+
+.header__theme-menu {
+  grid-row: 1;
+  justify-self: center;
+}
+
+@media (width <= 768px) {
+  .header__theme-menu {
+    justify-self: end;
+align-self: center;
+  }
+}
+
+.header__theme-menu-list {
+  align-self: center;
+  display: flex;
+  gap: 23px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--accent-color);
+}
+
+@media ( width <= 768px) {
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 18px;
+    padding-right: 5px;
+  }
+}
+
+.header__theme-menu-button {
+  border: none;
+  background: none; 
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid  var(--color-hover);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+ outline: none;
+ border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 82.5%;
+color: var(--title-color);
+text-shadow: 4px 4px 0 var(--accent-color);
+margin-left: -20px;
+}
+
+@media (width <= 600px) {
+  .title {
+    margin-left: 0;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
+
+.header_description-text {
+  grid-row: 3;
+  font-size: 18px;
+font-weight: bold;
+line-height: 130%;
+color: var(--accent-text-color);
+background-color: var(--accent-color);
+width: 50%;
+justify-self: end;
+align-self: center;
+}
+
+@media (width <= 600px) {
+.header_description-text {
+  width: 100%;
+}
 }
