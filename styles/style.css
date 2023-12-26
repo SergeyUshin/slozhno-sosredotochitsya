@@ -8,6 +8,8 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  margin: 0 auto;
+  height: 100%;
 }
 
 @media (width <= 600px) {
@@ -83,7 +85,7 @@
 .header__theme-menu-list {
   align-self: center;
   display: flex;
-  gap: 23px;
+  gap: 25px;
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
