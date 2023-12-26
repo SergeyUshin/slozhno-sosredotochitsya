@@ -248,7 +248,7 @@
   grid-column: 1;
 }
 
-@media (601px <= width < 800px){
+@media (601px <= width < 800px) {
   .section__itams-header {
     width: 32%;
   }
