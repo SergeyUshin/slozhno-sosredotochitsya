@@ -23,13 +23,14 @@
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
   height: 100%;
+  min-height: 668px;
 }
 
 .decorated-zone::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0px;
   width: 25px;
   height: 25px;
   border-left: 1px solid var(--accent-color);
@@ -85,7 +86,7 @@
 .header__theme-menu-list {
   align-self: center;
   display: flex;
-  gap: 25px;
+  gap: 10px;
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
@@ -95,14 +96,15 @@
 @media (width <= 768px) {
   .header__theme-menu-list {
     flex-direction: column;
-    gap: 18px;
-    padding-right: 5px;
   }
 }
 
 .header__theme-menu-button {
+  width: 70px;
+  height: 26px;
   border: none;
   background: none;
+  padding: 0;
 }
 
 .header__theme-menu-button:hover {
@@ -381,6 +383,7 @@ grid-column: 1/span 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 668px;
 }
 
 @media (width <= 600px) {
