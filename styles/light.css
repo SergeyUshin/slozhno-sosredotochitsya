@@ -24,6 +24,10 @@
   background-attachment: fixed;
 }
 
+.page.theme_light .decor-zona {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --text-color: #353430;
@@ -32,5 +36,8 @@
     --accent-text-color: #353430;
     --color-hover: rgba(50, 49, 45, 0.40);
     --bg-image: url(../images/cover-image-light.png);
+  }
+.decor-zona {
+    display: none;
   }
 }

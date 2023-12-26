@@ -23,3 +23,7 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+.page.theme_dark .decor-zona {
+  display: block;
+}
