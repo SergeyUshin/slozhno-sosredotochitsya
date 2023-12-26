@@ -11,6 +11,7 @@ html, body {
 }
 
 body {
+  min-height: 668px;
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0;
